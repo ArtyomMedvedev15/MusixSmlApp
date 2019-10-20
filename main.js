@@ -10,11 +10,18 @@ var song = new Audio();
 window.onload = playSong;
 
 function playSong(){
-    song.src = songs[currentSong];
+    song.src = "./musix/"+songs[currentSong];
     
     songName.textContent = songs[currentSong];
 
     song.play();
  }
 
+ function nextSong(){
+     currentSong++;
+     if(currentSong > songs.length-1){
+         currentSong = 0;
+     }
+     playSong();
+ }
  
