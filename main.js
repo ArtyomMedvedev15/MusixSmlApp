@@ -11,7 +11,8 @@ window.onload = playSong;
 
 function playSong(){
     song.src = "./musix/"+songs[currentSong];
-    
+    $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
+
     songName.textContent = songs[currentSong];
 
     song.play();
@@ -45,4 +46,11 @@ function playSong(){
      $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
      playSong();
  }
+
+ song.addEventListener('timeupdate',function(){
+
+    var pos = song.currentTime/song.duration;
+
+    fill.style.width = pos * 100 + '%';
+ });
  
