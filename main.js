@@ -52,5 +52,5 @@ function playSong(){
     var pos = song.currentTime/song.duration;
 
     fill.style.width = pos * 100 + '%';
- });
+  });
  
