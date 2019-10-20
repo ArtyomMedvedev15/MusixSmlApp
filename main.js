@@ -17,6 +17,17 @@ function playSong(){
     song.play();
  }
 
+ function PlayOrPause(){
+     if(song.paused){
+         song.play();
+         $("#BtPlay i").attr("class","fas fa-play");
+     }else{
+         song.pause();
+         $("#BtPlay i").attr("class","fas fa-pause");
+
+     }
+ }
+
  function nextSong(){
      currentSong++;
      if(currentSong > songs.length-1){
