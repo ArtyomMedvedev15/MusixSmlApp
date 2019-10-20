@@ -1,5 +1,5 @@
 var songs = ["BillieEilish-BadGuy.mp3","BillieEilish-Copycat.mp3","BillieEilish-BuryAFriend.mp3"];
-var postersSong = ["poster1.jpg","poster2.jpg","poster3.jpg"];
+var postersSong = ["poster.jpg","Programmer.jpg","poster.jpg"];
 var currentSong = 0;
 
 var songName = document.getElementById("songTitle");
@@ -33,6 +33,16 @@ function playSong(){
      if(currentSong > songs.length-1){
          currentSong = 0;
      }
+     playSong();
+     $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
+ }
+
+ function prev(){
+     currentSong--;
+     if(currentSong<0){
+         currentSong = songs.length-1;
+     }
+     $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
      playSong();
  }
  
