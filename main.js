@@ -14,6 +14,9 @@ function playSong(){
     $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
 
     songName.textContent = songs[currentSong];
+    
+    document.getElementById('bg').style = 'background-image:url(./img/' + postersSong[currentSong] + ")";
+    $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
 
     song.play();
  }
@@ -35,16 +38,14 @@ function playSong(){
          currentSong = 0;
      }
      playSong();
-     $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
- }
+   }
 
  function prev(){
      currentSong--;
      if(currentSong<0){
          currentSong = songs.length-1;
      }
-     $("#imgPoster").attr("src","./img/"+postersSong[currentSong]);
-     playSong();
+      playSong();
  }
 
  song.addEventListener('timeupdate',function(){

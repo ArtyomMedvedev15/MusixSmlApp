@@ -1,3 +1,28 @@
+#bg{
+    z-index: 99; /* изображение размыто */
+    background-image: url("./img/poster.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    -webkit-filter: blur(10px);
+    -moz-filter: blur(10px);
+    filter: blur(10px);
+}
+#logos{
+    position: absolute;
+    bottom: 595px;
+    left: 60px;
+    font-family: 'Fascinate Inline', cursive;  
+    font-size: 35px;
+    color: white;
+    
+}
+#pos{
+    position: absolute;
+    bottom: 100px;
+    left: 120px;
+}
 #songTitle{
     font-family: monospace;
     font-size: 18px;
